@@ -8,6 +8,11 @@ namespace MathLibrary
 {
     public class MathClass
     {
+        public MathClass()
+        {
+            
+        }
+
         public int Addition(int one, int two)
         {
             return one + two;

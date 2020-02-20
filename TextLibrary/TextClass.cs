@@ -8,6 +8,11 @@ namespace TextLibrary
 {
     public class TextClass
     {
+        public TextClass()
+        {
+            
+        }
+
         public string EchoString(string str)
         {
             return str;
