@@ -46,9 +46,36 @@
     <Compile Include="AssemblyLoader.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\BinaryBlobs.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BinaryBlobs.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\BinaryBlobs.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>BinaryBlobs.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MathLibrary.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TextLibrary.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MathLibrary\MathLibrary.csproj">
+      <Project>{EDEE25A2-6E95-4BA2-9187-3FD201D6BA4C}</Project>
+      <Name>MathLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TextLibrary\TextLibrary.csproj">
+      <Project>{DFA02C05-DB74-4B63-87B6-6B6E933BC374}</Project>
+      <Name>TextLibrary</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
